@@ -112,12 +112,16 @@ export default function App() {
       <section className="section">
         <h2>Debts</h2>
         <form onSubmit={addDebt} className="form">
+          <label htmlFor="debt-person">Debtor</label>
           <input
+            id="debt-person"
             placeholder="For who"
             value={debtor}
             onChange={e => setDebtor(e.target.value)}
           />
+          <label htmlFor="debt-amount">Amount (LKR)</label>
           <input
+            id="debt-amount"
             placeholder="Amount (LKR)"
             type="number"
             value={debtAmount}
@@ -143,12 +147,16 @@ export default function App() {
       <section className="section">
         <h2>Income</h2>
         <form onSubmit={addIncome} className="form">
+          <label htmlFor="income-source">Source</label>
           <input
+            id="income-source"
             placeholder="Source"
             value={incomeDesc}
             onChange={e => setIncomeDesc(e.target.value)}
           />
+          <label htmlFor="income-amount">Amount (LKR)</label>
           <input
+            id="income-amount"
             placeholder="Amount (LKR)"
             type="number"
             value={incomeAmount}
@@ -170,12 +178,16 @@ export default function App() {
       <section className="section">
         <h2>Expenses</h2>
         <form onSubmit={addExpense} className="form">
+          <label htmlFor="expense-desc">Description</label>
           <input
+            id="expense-desc"
             placeholder="Description"
             value={expenseDesc}
             onChange={e => setExpenseDesc(e.target.value)}
           />
+          <label htmlFor="expense-amount">Amount (LKR)</label>
           <input
+            id="expense-amount"
             placeholder="Amount (LKR)"
             type="number"
             value={expenseAmount}
