@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const currency = new Intl.NumberFormat('en-LK', {
   style: 'currency',
@@ -107,6 +108,7 @@ export default function App() {
 
   return (
     <div className="container">
+      <ThemeSwitcher />
       <h1>Debt Manager</h1>
 
       <section className="section">

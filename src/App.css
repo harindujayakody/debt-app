@@ -1,52 +1,52 @@
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  font-family: var(--font-ui);
+  background: var(--color-bg);
   min-height: 100vh;
-  color: #333;
+  color: var(--color-fg);
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
+  padding: var(--space-6);
+  background: var(--color-muted);
+  border-radius: var(--radius-md);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
 }
 
 .section {
-  margin-bottom: 2rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
+  margin-bottom: var(--space-6);
+  background: var(--color-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .form {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .form input {
   flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-sm);
 }
 
 .form button {
-  padding: 0.5rem 1rem;
+  padding: var(--space-2) var(--space-4);
   border: none;
-  background: #4f46e5;
-  color: #fff;
-  border-radius: 4px;
+  background: var(--color-secondary);
+  color: var(--color-text-on-brand);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 
@@ -60,31 +60,41 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
-  background: #f9f9f9;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  padding: var(--space-2);
+  background: var(--color-muted);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
 }
 
 .list-item button {
-  margin-left: 0.5rem; /* match main branch spacing */
+  margin-left: var(--space-2); /* match main branch spacing */
   border: none;
-  color: #fff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  color: var(--color-text-on-brand);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 
 .list-item button.edit {
-  background: #10b981;
+  background: var(--color-success);
 }
 
 .list-item button.pay {
-  background: #3b82f6;
+  background: var(--color-primary);
 }
 
 .list-item button.remove {
-  background: #ef4444;
+  background: var(--color-danger);
+}
+
+.theme-toggle {
+  background: var(--color-primary);
+  color: var(--color-text-on-brand);
+  padding: var(--space-2) var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-bottom: var(--space-4);
 }
 
 .summary {
