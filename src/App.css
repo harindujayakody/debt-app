@@ -20,6 +20,19 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4f46e5;
+}
+
 .section {
   margin-bottom: 2rem;
   background: #fff;
