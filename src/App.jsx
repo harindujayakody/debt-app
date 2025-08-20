@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Layout from './components/Layout';
 
 const currency = new Intl.NumberFormat('en-LK', {
   style: 'currency',
@@ -105,8 +106,12 @@ export default function App() {
     setExpenses(expenses.filter(ex => ex.id !== id));
   }
 
+  function quickAddExpense(exp) {
+    setExpenses([...expenses, { id: Date.now(), ...exp }]);
+  }
   return (
-    <div className="container">
+    <Layout onAddExpense={quickAddExpense}>
+      <div className="container">
       <h1>Debt Manager</h1>
 
       <section className="section">
@@ -211,5 +216,6 @@ export default function App() {
         <p className="summary">Remaining Balance: {currency.format(remaining)}</p>
       </section>
     </div>
+    </Layout>
   );
 }
