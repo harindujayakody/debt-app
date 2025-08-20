@@ -80,12 +80,15 @@ h1 {
 }
 
 .list-item button {
-  margin-left: 0.5rem; /* match main branch spacing */
   border: none;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.list-item button + button {
+  margin-left: 0.5rem;
 }
 
 .list-item button.edit {
